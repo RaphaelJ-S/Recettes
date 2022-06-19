@@ -1,67 +1,54 @@
 
+dejeuner : Breakfast burritos -> https://mealprepmanual.com/breakfast-burritos/
+diner : Honey miso noodles -> https://mealprepmanual.com/honey-miso-noodles/
+souper : Firecracker beef & brussels -> https://mealprepmanual.com/firecracker-beef-brussels/
+collation : Spicy popcorn chicken -> https://mealprepmanual.com/spicy-popcorn-chicken/
 
-Pb and J bakes oatmeal -> https://mealprepmanual.com/pb-and-j-baked-oatmeal/
-3 cups (240 g) old fashioned oats
-2 scoops (60 g) vanilla protein powder
-1 tsp (4 g) baking powder
-3 tbsp (48 g) peanut butter
-2 tbsp (42 g) maple syrup
-10 tbsp (150 g) liquid egg whites or 2 eggs
-2 cups (480 g) milk
-1 lb (454 g) frozen strawberries
-1 1/2 tsp (6 g) splenda or 5-6x sugar/maple syrup
-2 tsp (8 g) pectin optional but recommended
-2 tbsp (32 g) peanut butter
 
-Honey miso noodles -> https://mealprepmanual.com/honey-miso-noodles/
-3 tbsp (60 g) honey
-2 tbsp (30 g) soy sauce gluten free if needed
-3 tbsp (45 g) red miso paste
-1/4 cup (60 g) chicken broth
-1 1/2 tbsp (23 g) rice vinegar
-12 oz (336 g) lo mein noodles spaghetti noodles work too, gluten free if needed
-1 medium (200 g) sweet onion
-5 medium (300 g) carrots
-2 medium (300 g) zucchini
-3 (15 g) green onions
-1 tbsp (15 g) minced garlic
-2 1/2 lbs (1135 g) boneless skinless chicken thighs
-1 tsp (3 g) garlic powder
-1 1/2 tbsp (23 g) olive oil
-1 tbsp (6 g) sesame seeds optional for garnish
-salt and pepper to taste
-
-Honey miso noodles -> https://mealprepmanual.com/honey-miso-noodles/
-3 tbsp (60 g) honey
-2 tbsp (30 g) soy sauce gluten free if needed
-3 tbsp (45 g) red miso paste
-1/4 cup (60 g) chicken broth
-1 1/2 tbsp (23 g) rice vinegar
-12 oz (336 g) lo mein noodles spaghetti noodles work too, gluten free if needed
-1 medium (200 g) sweet onion
-5 medium (300 g) carrots
-2 medium (300 g) zucchini
-3 (15 g) green onions
-1 tbsp (15 g) minced garlic
-2 1/2 lbs (1135 g) boneless skinless chicken thighs
-1 tsp (3 g) garlic powder
-1 1/2 tbsp (23 g) olive oil
-1 tbsp (6 g) sesame seeds optional for garnish
-salt and pepper to taste
-
-Spicy popcorn chicken -> https://mealprepmanual.com/spicy-popcorn-chicken/
-5 lbs (2270 g) boneless skinless chicken breast
-2 cups (300 g) corn chex ground (or use breadcrumbs)
-2/3 cup (75 g) cornstarch tapioca works as well
-2 tsp (6 g) cayenne pepper
-2 tsp (6 g) paprika
-3 tsp (12 g) salt
-2 tsp (6 g) pepper
-3 (150 g) eggs
-1/4 cup (60 g) hot sauce
-(15 g) cooking spray
-
-autre -> alasdflkje
-test4
-test5
-test6
+minced garlic, 1 tbsp et 1 tbsp; 30
+pepper, 2 tsp; 6
+cooking spray, spray liberaly; 15
+red pepper, 1 medium; 150
+spinach, 5 oz; 140
+frozen shredded hash browns, 2 cups; 170
+shredded cheese, 1 cup; 120
+onion, 1/2 medium; 100
+soy sauce, 2 tbsp; 30
+zucchini, 2 medium; 300
+cornstarch, 1 1/2 tbsp et 2/3 cup; 90
+ground beef, 2 lbs; 908
+garlic powder, 1 tsp et 1 tsp; 6
+oil, 1 tbsp et 2 tbsp et 1 tbsp; 60
+honey, 3 tbsp et 5 tbsp; 144
+lo mein noodles, 12 oz; 336
+Brussels sprouts, 1 lb; 454
+poblano peppers, 2 medium; 200
+rice vinegar, 1 1/2 tbsp; 23
+olive oil, 1 1/2 tbsp; 23
+carrots, 5 medium; 300
+brown sugar, 1 tbsp; 12
+eggs, 8 large et 3; 710
+smoked paprika, 1 tsp; 3
+onion powder, 1 tsp; 3
+salt, 3 tsp; 12
+oregano, 1 tsp; 1
+lime, 1 medium; 5
+milk, 2 tbsp; 30
+hot sauce, 1/4 cup et 1/4 cup; 120
+rubbed sage, 1 1/2 tsp; 2
+green pepper, 1 medium; 150
+9 inch flour tortillas, 17; 400
+ground turkey, 1 lb; 454
+sweet onion, 1 medium et 1 medium; 400
+red miso paste, 3 tbsp; 45
+sesame seeds, 1 tbsp; 6
+boneless skinless chicken breast, 5 lbs; 2270
+paprika, 2 tsp; 6
+cayenne pepper, 1 tsp et 2 tsp; 9
+apple cider vinegar, 1 1/5 tbsp; 20
+breadcrumb, 2 cups; 300
+chicken broth, 1/4 cup; 60
+boneless skinless chicken thighs, 2 1/2 lbs; 1135
+cooked rice, 3 3/4 cups; 563
+red pepper flakes, 1 tbsp; 6
+green onions, 3 et 4 stalks; 35

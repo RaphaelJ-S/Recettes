@@ -2,64 +2,42 @@ package recettes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
 public class Selecteur {
 
-    private List<Recette> dejeuner;
-    private List<Recette> principal;
-    private List<Recette> collation;
-    private List<Recette> finDeSemaine;
+    Map<String, List<Recette>> recettes;
 
-    public Selecteur(List<Optional<List<Recette>>> recettes) {
-        this.dejeuner = recettes.get(0).orElseGet(() -> new ArrayList<Recette>());
-        this.principal = recettes.get(1).orElseGet(() -> new ArrayList<Recette>());
-        this.collation = recettes.get(2).orElseGet(() -> new ArrayList<Recette>());
-        this.finDeSemaine = recettes.get(3).orElseGet(() -> new ArrayList<Recette>());
+    public Selecteur(Map<String, List<Recette>> recettes) {
+        this.recettes = recettes;
     }
 
-    public Optional<List<Recette>> faireChoix() {
-        Optional<List<Recette>> choix = Optional.empty();
-        if (dejeuner.size() != 0 && principal.size() != 0) {
-            List<Recette> recettesChoisies = new ArrayList<>();
-            List<Optional<Integer>> index = genererIndexChoixUnique();
-            Integer indexDejeuner = index.get(0).get();
-            Integer indexDiner = index.get(1).get();
-            Integer indexSouper = index.get(2).get();
-            recettesChoisies.add(dejeuner.get(indexDejeuner));
-            recettesChoisies.add(principal.get(indexDiner));
-            recettesChoisies.add(principal.get(indexSouper));
-            recettesChoisies.add(
-                    index.get(3).isPresent() ? collation.get(index.get(3).get()) : null);
-            recettesChoisies.add(
-                    index.get(4).isPresent() ? finDeSemaine.get(index.get(4).get()) : null);
-            choix = Optional.of(recettesChoisies);
-
-        }
+    public Map<String, Optional<Recette>> faireChoix() {
+        Map<String, Optional<Recette>> choix = new HashMap<>();
+        choix.put("dejeuner", genererIndexChoixUnique(this.recettes.get("dejeuner")));
+        choix.put("diner", genererIndexChoixUnique(this.recettes.get("principal")));
+        choix.put("souper", genererIndexChoixUnique(this.recettes.get("principal")));
+        choix.put("collation", genererIndexChoixUnique(this.recettes.get("collation")));
+        choix.put("finDeSemaine", genererIndexChoixUnique(this.recettes.get("finDeSemaine")));
 
         return choix;
 
     }
 
-    private List<Optional<Integer>> genererIndexChoixUnique() {
+    private Optional<Recette> genererIndexChoixUnique(List<Recette> possibilites) {
         Random rand = new Random();
-        Optional<Integer> indexDejeuner = Optional.of(rand.nextInt(dejeuner.size()));
-        Optional<Integer> indexDiner = Optional.of(rand.nextInt(principal.size()));
-        Optional<Integer> indexSouper = Optional.of(rand.nextInt(principal.size()));
-        Optional<Integer> indexCollation = collation.size() == 0 ? Optional.empty()
-                : Optional.of(rand.nextInt(collation.size()));
-        Optional<Integer> indexFinDeSemaine = finDeSemaine.size() == 0 ? Optional.empty()
-                : Optional.of(rand.nextInt(finDeSemaine.size()));
-        return new ArrayList<>(
-                Arrays.asList(indexDejeuner, indexDiner, indexSouper, indexCollation, indexFinDeSemaine));
+        Optional<Recette> choix = Optional.empty();
+        if (possibilites.size() > 0) {
+            int index = rand.nextInt(possibilites.size());
+            Recette choisie = possibilites.get(index);
+            choix = Optional.of(choisie);
+        }
+
+        return choix;
     }
 
-    @Override
-    public String toString() {
-        return "Recettes de la semaine : \n\nDejeuner: " + dejeuner.toString() + "\n\nPrincipal : "
-                + principal.toString() + "\n\nCollation : " + collation.toString() + "\n\nRecettes de la fds : "
-                + finDeSemaine.toString();
-    }
 }

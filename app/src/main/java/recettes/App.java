@@ -3,7 +3,9 @@
  */
 package recettes;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class App {
@@ -14,23 +16,31 @@ public class App {
     public static void main(String[] args) {
         Lecteur lecteur = new Lecteur(recettesPath);
         Ecriveur ecriveur = new Ecriveur(outputPath);
-        Parser parser = new JsonParser();
-        List<Optional<List<Recette>>> recettes = parser.parse(lecteur);
-        Selecteur selecteur = new Selecteur(recettes);
+        Map<String, List<Recette>> recettes = new JsonParser().parse(lecteur);
+        Map<String, Optional<Recette>> choix = new Selecteur(recettes).faireChoix();
 
-        Optional<List<Recette>> choix = selecteur.faireChoix();
-        if (choix.isPresent()) {
-            List<Recette> aff = choix.get();
-            StringBuffer collage = new StringBuffer();
-            aff.stream()
-                    .filter((recette) -> recette != null)
-                    .forEach((recette) -> {
-                        collage.append(recette.toString());
-                    });
-            ecriveur.ecrire(collage.toString());
-        } else {
-            System.out.println("Impossible de générer un choix. Ajoutez des possibilités!");
-        }
+        ecriveur.ecrire(genererAffichage(choix));
 
     }
+
+    public static String genererAffichage(Map<String, Optional<Recette>> choix) {
+        StringBuffer header = new StringBuffer();
+        StringBuffer body = new StringBuffer();
+        Map<String, Ingredient> combinaison = new HashMap<>();
+        choix.forEach((temps, recette) -> {
+            if (recette.isPresent()) {
+                Recette rec = recette.get();
+                header.append("\n" + temps + " : " + rec.toString());
+                combinaison.putAll(rec.combinerIngredients(combinaison));
+
+            }
+        });
+        header.append("\n\n");
+        combinaison.forEach(
+                (nom, ingredient) -> body
+                        .append("\n" + ingredient.nom + ", " + ingredient.volume + "; " + ingredient.poid));
+
+        return header.toString() + body.toString();
+    }
+
 }
